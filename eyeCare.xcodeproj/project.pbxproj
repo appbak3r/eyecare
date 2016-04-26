@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E7815941CCF5EFA00D8A90A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7815931CCF5EFA00D8A90A /* AppDelegate.swift */; };
+		6E7815961CCF5EFA00D8A90A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7815951CCF5EFA00D8A90A /* Assets.xcassets */; };
+		6E7815991CCF5EFA00D8A90A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7815971CCF5EFA00D8A90A /* MainMenu.xib */; };
+		6E7815A41CCF5EFA00D8A90A /* eyeCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7815A31CCF5EFA00D8A90A /* eyeCareTests.swift */; };
+		6E7815AF1CCF5EFA00D8A90A /* eyeCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7815AE1CCF5EFA00D8A90A /* eyeCareUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E7815A01CCF5EFA00D8A90A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E7815881CCF5EFA00D8A90A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E78158F1CCF5EFA00D8A90A;
+			remoteInfo = eyeCare;
+		};
+		6E7815AB1CCF5EFA00D8A90A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E7815881CCF5EFA00D8A90A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E78158F1CCF5EFA00D8A90A;
+			remoteInfo = eyeCare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6E7815901CCF5EFA00D8A90A /* eyeCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eyeCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E7815931CCF5EFA00D8A90A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E7815951CCF5EFA00D8A90A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E7815981CCF5EFA00D8A90A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6E78159A1CCF5EFA00D8A90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E78159F1CCF5EFA00D8A90A /* eyeCareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eyeCareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E7815A31CCF5EFA00D8A90A /* eyeCareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eyeCareTests.swift; sourceTree = "<group>"; };
+		6E7815A51CCF5EFA00D8A90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E7815AA1CCF5EFA00D8A90A /* eyeCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eyeCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E7815AE1CCF5EFA00D8A90A /* eyeCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eyeCareUITests.swift; sourceTree = "<group>"; };
+		6E7815B01CCF5EFA00D8A90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E78158D1CCF5EFA00D8A90A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E78159C1CCF5EFA00D8A90A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E7815A71CCF5EFA00D8A90A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E7815871CCF5EFA00D8A90A = {
+			isa = PBXGroup;
+			children = (
+				6E7815921CCF5EFA00D8A90A /* eyeCare */,
+				6E7815A21CCF5EFA00D8A90A /* eyeCareTests */,
+				6E7815AD1CCF5EFA00D8A90A /* eyeCareUITests */,
+				6E7815911CCF5EFA00D8A90A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E7815911CCF5EFA00D8A90A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E7815901CCF5EFA00D8A90A /* eyeCare.app */,
+				6E78159F1CCF5EFA00D8A90A /* eyeCareTests.xctest */,
+				6E7815AA1CCF5EFA00D8A90A /* eyeCareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E7815921CCF5EFA00D8A90A /* eyeCare */ = {
+			isa = PBXGroup;
+			children = (
+				6E7815931CCF5EFA00D8A90A /* AppDelegate.swift */,
+				6E7815951CCF5EFA00D8A90A /* Assets.xcassets */,
+				6E7815971CCF5EFA00D8A90A /* MainMenu.xib */,
+				6E78159A1CCF5EFA00D8A90A /* Info.plist */,
+			);
+			path = eyeCare;
+			sourceTree = "<group>";
+		};
+		6E7815A21CCF5EFA00D8A90A /* eyeCareTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E7815A31CCF5EFA00D8A90A /* eyeCareTests.swift */,
+				6E7815A51CCF5EFA00D8A90A /* Info.plist */,
+			);
+			path = eyeCareTests;
+			sourceTree = "<group>";
+		};
+		6E7815AD1CCF5EFA00D8A90A /* eyeCareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6E7815AE1CCF5EFA00D8A90A /* eyeCareUITests.swift */,
+				6E7815B01CCF5EFA00D8A90A /* Info.plist */,
+			);
+			path = eyeCareUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E78158F1CCF5EFA00D8A90A /* eyeCare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E7815B31CCF5EFA00D8A90A /* Build configuration list for PBXNativeTarget "eyeCare" */;
+			buildPhases = (
+				6E78158C1CCF5EFA00D8A90A /* Sources */,
+				6E78158D1CCF5EFA00D8A90A /* Frameworks */,
+				6E78158E1CCF5EFA00D8A90A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eyeCare;
+			productName = eyeCare;
+			productReference = 6E7815901CCF5EFA00D8A90A /* eyeCare.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E78159E1CCF5EFA00D8A90A /* eyeCareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E7815B61CCF5EFA00D8A90A /* Build configuration list for PBXNativeTarget "eyeCareTests" */;
+			buildPhases = (
+				6E78159B1CCF5EFA00D8A90A /* Sources */,
+				6E78159C1CCF5EFA00D8A90A /* Frameworks */,
+				6E78159D1CCF5EFA00D8A90A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E7815A11CCF5EFA00D8A90A /* PBXTargetDependency */,
+			);
+			name = eyeCareTests;
+			productName = eyeCareTests;
+			productReference = 6E78159F1CCF5EFA00D8A90A /* eyeCareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6E7815A91CCF5EFA00D8A90A /* eyeCareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E7815B91CCF5EFA00D8A90A /* Build configuration list for PBXNativeTarget "eyeCareUITests" */;
+			buildPhases = (
+				6E7815A61CCF5EFA00D8A90A /* Sources */,
+				6E7815A71CCF5EFA00D8A90A /* Frameworks */,
+				6E7815A81CCF5EFA00D8A90A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E7815AC1CCF5EFA00D8A90A /* PBXTargetDependency */,
+			);
+			name = eyeCareUITests;
+			productName = eyeCareUITests;
+			productReference = 6E7815AA1CCF5EFA00D8A90A /* eyeCareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E7815881CCF5EFA00D8A90A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = IonCloud;
+				TargetAttributes = {
+					6E78158F1CCF5EFA00D8A90A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					6E78159E1CCF5EFA00D8A90A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6E78158F1CCF5EFA00D8A90A;
+					};
+					6E7815A91CCF5EFA00D8A90A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 6E78158F1CCF5EFA00D8A90A;
+					};
+				};
+			};
+			buildConfigurationList = 6E78158B1CCF5EFA00D8A90A /* Build configuration list for PBXProject "eyeCare" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E7815871CCF5EFA00D8A90A;
+			productRefGroup = 6E7815911CCF5EFA00D8A90A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E78158F1CCF5EFA00D8A90A /* eyeCare */,
+				6E78159E1CCF5EFA00D8A90A /* eyeCareTests */,
+				6E7815A91CCF5EFA00D8A90A /* eyeCareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E78158E1CCF5EFA00D8A90A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7815961CCF5EFA00D8A90A /* Assets.xcassets in Resources */,
+				6E7815991CCF5EFA00D8A90A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E78159D1CCF5EFA00D8A90A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E7815A81CCF5EFA00D8A90A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E78158C1CCF5EFA00D8A90A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7815941CCF5EFA00D8A90A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E78159B1CCF5EFA00D8A90A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7815A41CCF5EFA00D8A90A /* eyeCareTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E7815A61CCF5EFA00D8A90A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7815AF1CCF5EFA00D8A90A /* eyeCareUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E7815A11CCF5EFA00D8A90A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E78158F1CCF5EFA00D8A90A /* eyeCare */;
+			targetProxy = 6E7815A01CCF5EFA00D8A90A /* PBXContainerItemProxy */;
+		};
+		6E7815AC1CCF5EFA00D8A90A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E78158F1CCF5EFA00D8A90A /* eyeCare */;
+			targetProxy = 6E7815AB1CCF5EFA00D8A90A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E7815971CCF5EFA00D8A90A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E7815981CCF5EFA00D8A90A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E7815B11CCF5EFA00D8A90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E7815B21CCF5EFA00D8A90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6E7815B41CCF5EFA00D8A90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = eyeCare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ioncloud.ru.eyeCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6E7815B51CCF5EFA00D8A90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = eyeCare/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ioncloud.ru.eyeCare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6E7815B71CCF5EFA00D8A90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = eyeCareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ioncloud.ru.eyeCareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eyeCare.app/Contents/MacOS/eyeCare";
+			};
+			name = Debug;
+		};
+		6E7815B81CCF5EFA00D8A90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = eyeCareTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ioncloud.ru.eyeCareTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eyeCare.app/Contents/MacOS/eyeCare";
+			};
+			name = Release;
+		};
+		6E7815BA1CCF5EFA00D8A90A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = eyeCareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ioncloud.ru.eyeCareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = eyeCare;
+			};
+			name = Debug;
+		};
+		6E7815BB1CCF5EFA00D8A90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = eyeCareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ioncloud.ru.eyeCareUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = eyeCare;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E78158B1CCF5EFA00D8A90A /* Build configuration list for PBXProject "eyeCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E7815B11CCF5EFA00D8A90A /* Debug */,
+				6E7815B21CCF5EFA00D8A90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E7815B31CCF5EFA00D8A90A /* Build configuration list for PBXNativeTarget "eyeCare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E7815B41CCF5EFA00D8A90A /* Debug */,
+				6E7815B51CCF5EFA00D8A90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6E7815B61CCF5EFA00D8A90A /* Build configuration list for PBXNativeTarget "eyeCareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E7815B71CCF5EFA00D8A90A /* Debug */,
+				6E7815B81CCF5EFA00D8A90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6E7815B91CCF5EFA00D8A90A /* Build configuration list for PBXNativeTarget "eyeCareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E7815BA1CCF5EFA00D8A90A /* Debug */,
+				6E7815BB1CCF5EFA00D8A90A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E7815881CCF5EFA00D8A90A /* Project object */;
+}
