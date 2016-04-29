@@ -14,10 +14,16 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="eyeCare" customModuleProvider="target">
             <connections>
+                <outlet property="BreakForTextField" destination="wGj-Ud-vxS" id="aAn-X9-f3t"/>
+                <outlet property="BreakIntervalTextField" destination="kAh-lg-xC1" id="lh4-RO-Sx7"/>
+                <outlet property="BreakMenuItem" destination="0ro-Yf-kK3" id="igR-6x-T75"/>
                 <outlet property="aboutWindow" destination="HmY-88-PDG" id="UXD-aS-tYp"/>
                 <outlet property="breakCountDownLabel" destination="z21-Bp-Cbv" id="CRR-gp-vpL"/>
                 <outlet property="breakCountDownText" destination="ygD-dm-N3D" id="fCe-aA-Jzs"/>
+                <outlet property="breakForTextCell" destination="i3b-a6-k03" id="dYH-MI-Nj9"/>
+                <outlet property="breakIntervalTextCell" destination="e58-au-jfV" id="whG-FG-0bN"/>
                 <outlet property="breakMenuItem" destination="0ro-Yf-kK3" id="z84-XZ-GuY"/>
+                <outlet property="launchAtStartupCheckbox" destination="fZU-kD-acL" id="maz-GT-7LZ"/>
                 <outlet property="preferencesWindow" destination="DqY-AC-BF6" id="LOw-fp-mAe"/>
                 <outlet property="skipBreakMenuItem" destination="qzK-Zz-2TR" id="WVy-LG-M0w"/>
                 <outlet property="skipButton" destination="zWt-NE-0LX" id="om2-l9-f5d"/>
@@ -41,6 +47,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="skipBreakClicked:" target="Voe-Tx-rLC" id="bLe-bH-Efz"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Preferences" id="tF9-oU-dLj">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="preferencesClicked:" target="Voe-Tx-rLC" id="QHe-uk-KSi"/>
                     </connections>
                 </menuItem>
                 <menuItem title="About" id="Myj-EN-vbW">
@@ -112,16 +124,76 @@
             </view>
             <point key="canvasLocation" x="153" y="-45"/>
         </window>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="DqY-AC-BF6">
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="DqY-AC-BF6">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="75" y="103" width="480" height="270"/>
+            <rect key="contentRect" x="75" y="103" width="230" height="145"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" id="kWs-Sh-HYw">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="230" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bq7-9g-Xc9">
+                        <rect key="frame" x="18" y="109" width="129" height="18"/>
+                        <buttonCell key="cell" type="check" title="Launch at startup" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fZU-kD-acL">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="launchAtStartupCheckboxClicked:" target="Voe-Tx-rLC" id="LBZ-AO-bP6"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tqt-wp-wjC">
+                        <rect key="frame" x="18" y="74" width="59" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Break for" id="dKl-gj-3h4">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmp-Ej-ATX">
+                        <rect key="frame" x="186" y="74" width="26" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="6sU-FO-mz2">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAh-lg-xC1" customClass="ICTextField" customModule="eyeCare" customModuleProvider="target">
+                        <rect key="frame" x="113" y="41" width="67" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="e58-au-jfV" userLabel="Break Intreval Text Cell">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HEN-eP-wLx">
+                        <rect key="frame" x="18" y="44" width="87" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Break intreval" id="CiE-sv-pkD">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubL-h2-kZM">
+                        <rect key="frame" x="186" y="44" width="26" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="min" id="bz6-8Z-CNx">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wGj-Ud-vxS" customClass="ICTextField" customModule="eyeCare" customModuleProvider="target">
+                        <rect key="frame" x="113" y="71" width="67" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="i3b-a6-k03">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
             </view>
-            <point key="canvasLocation" x="-104" y="-367"/>
+            <point key="canvasLocation" x="-81" y="-421.5"/>
         </window>
     </objects>
     <resources>

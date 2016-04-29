@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E2A96671CD361140059EC52 /* ICTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2A96661CD361140059EC52 /* ICTextField.swift */; };
 		6E7815941CCF5EFA00D8A90A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7815931CCF5EFA00D8A90A /* AppDelegate.swift */; };
 		6E7815961CCF5EFA00D8A90A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7815951CCF5EFA00D8A90A /* Assets.xcassets */; };
 		6E7815991CCF5EFA00D8A90A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E7815971CCF5EFA00D8A90A /* MainMenu.xib */; };
 		6E7815A41CCF5EFA00D8A90A /* eyeCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7815A31CCF5EFA00D8A90A /* eyeCareTests.swift */; };
 		6E7815AF1CCF5EFA00D8A90A /* eyeCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7815AE1CCF5EFA00D8A90A /* eyeCareUITests.swift */; };
+		6EB70BBA1CD0ADD10058A8E0 /* StrartupLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB70BB91CD0ADD10058A8E0 /* StrartupLaunch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E2A96661CD361140059EC52 /* ICTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTextField.swift; sourceTree = "<group>"; };
 		6E7815901CCF5EFA00D8A90A /* eyeCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eyeCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7815931CCF5EFA00D8A90A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E7815951CCF5EFA00D8A90A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		6E7815AA1CCF5EFA00D8A90A /* eyeCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eyeCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7815AE1CCF5EFA00D8A90A /* eyeCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eyeCareUITests.swift; sourceTree = "<group>"; };
 		6E7815B01CCF5EFA00D8A90A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EB70BB91CD0ADD10058A8E0 /* StrartupLaunch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrartupLaunch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				6E7815951CCF5EFA00D8A90A /* Assets.xcassets */,
 				6E7815971CCF5EFA00D8A90A /* MainMenu.xib */,
 				6E78159A1CCF5EFA00D8A90A /* Info.plist */,
+				6EB70BB91CD0ADD10058A8E0 /* StrartupLaunch.swift */,
+				6E2A96661CD361140059EC52 /* ICTextField.swift */,
 			);
 			path = eyeCare;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E7815941CCF5EFA00D8A90A /* AppDelegate.swift in Sources */,
+				6E2A96671CD361140059EC52 /* ICTextField.swift in Sources */,
+				6EB70BBA1CD0ADD10058A8E0 /* StrartupLaunch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +479,7 @@
 				6E7815B51CCF5EFA00D8A90A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E7815B61CCF5EFA00D8A90A /* Build configuration list for PBXNativeTarget "eyeCareTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +488,7 @@
 				6E7815B81CCF5EFA00D8A90A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E7815B91CCF5EFA00D8A90A /* Build configuration list for PBXNativeTarget "eyeCareUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +497,7 @@
 				6E7815BB1CCF5EFA00D8A90A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
