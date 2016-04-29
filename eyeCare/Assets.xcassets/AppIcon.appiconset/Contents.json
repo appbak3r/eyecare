@@ -3,60 +3,61 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "1461943455_science-technology-2.png",
+      "filename" : "Icon-16.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "1461943423_science-technology-2.png",
+      "filename" : "Icon-33.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "1461943360_science-technology-4.png",
+      "filename" : "Icon-32.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "1461943391_science-technology-5.png",
+      "filename" : "Icon-64.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "1461943360_science-technology-3.png",
+      "filename" : "iTunesArtwork-4.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "1461943391_science-technology-4.png",
+      "filename" : "iTunesArtwork-3.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "1461943360_science-technology-2.png",
+      "filename" : "iTunesArtwork-2.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "1461943391_science-technology-2.png",
+      "filename" : "iTunesArtwork-1.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "1461943391_science-technology-3.png",
+      "filename" : "iTunesArtwork.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "mac",
       "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "iTunesArtwork@2x.png",
       "scale" : "2x"
     }
   ],
