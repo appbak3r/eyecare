@@ -12,7 +12,6 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var aboutWindow: NSWindow!
-    @IBOutlet weak var exampleWindow: NSWindow!
 
 
     @IBOutlet weak var launchAtStartupCheckbox: NSButtonCell!
@@ -51,6 +50,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
 
     let overlayWindow = NSWindow()
+    private var secondayOverlayWindows:[NSWindow] = [NSWindow]()
+    
 
     @IBOutlet weak var statusMenu: NSMenu!
     
@@ -76,7 +77,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         NSApplication.sharedApplication().activateIgnoringOtherApps(true)
         preferencesWindow.setFrameOrigin(NSPoint(x: width/2 - 230/2, y: height/2 - 145/2))
-        preferencesWindow.makeKeyAndOrderFront(exampleWindow)
+        preferencesWindow.makeKeyAndOrderFront(preferencesWindow)
     }
     @IBAction func aboutClicked(sender: AnyObject) {
         let scrn: NSScreen = NSScreen.mainScreen()!
@@ -97,21 +98,35 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.breakTimer!.invalidate()
         self.breakCountDownTimer!.invalidate()
         statusMenu.cancelTracking()
+        changeImage()
+        let screens: [NSScreen] = NSScreen.screens()!
         
-        let scrn: NSScreen = NSScreen.mainScreen()!
-        let rect: NSRect = scrn.frame
+        for (_, screen) in screens.enumerate() {
+                let window = NSWindow()
+                window.collectionBehavior = NSWindowCollectionBehavior.CanJoinAllSpaces
+                let frame = screen.frame
+                window.level = Int(CGWindowLevelForKey(.StatusWindowLevelKey))
+                window.titlebarAppearsTransparent  =   true
+                window.titleVisibility             =   .Hidden
+                window.styleMask = NSBorderlessWindowMask
+                window.setFrame(frame, display: true)
+                window.makeKeyAndOrderFront(window)
+                secondayOverlayWindows.append(window)
+        }
+        
+        let screen = NSScreen.mainScreen()
+        let rect: NSRect = screen!.frame
         let height = rect.size.height
         let width = rect.size.width
-    
-        var frame = overlayWindow.frame
+        var frame = screen!.frame
         frame.size = NSMakeSize(width, height)
         overlayWindow.setFrame(frame, display: true)
         overlayWindow.makeKeyAndOrderFront(overlayWindow)
-        
         overlayWindow.setIsVisible(true)
+        
         skipButton.setFrameOrigin(NSPoint(x: width/2 - 75, y: 150))
         breakCountDownLabel.setFrameOrigin(NSPoint(x: width/2 - 87, y: 220))
-
+        
         self.timer = NSTimer.scheduledTimerWithTimeInterval(changeImageInterval,
                                                             target:self,
                                                             selector:#selector(AppDelegate.changeImage),
@@ -172,22 +187,40 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         overlayWindow.setIsVisible(false)
         skipBreakMenuItem.hidden = true
         breakMenuItem.hidden = false
+        
+        for (_, window) in self.secondayOverlayWindows.enumerate() {
+            window.setIsVisible(false)
+            window.orderOut(window)
+            if let objIndex=self.secondayOverlayWindows.indexOf(window){
+                self.secondayOverlayWindows.removeAtIndex(objIndex)
+            }
+        }
+        
         setBreakTimer()
         setBreakCountDownTimer()
     }
     
     func changeImage(){
-        let scrn: NSScreen = NSScreen.mainScreen()!
+        let scrn: NSScreen = overlayWindow.screen!
         let rect: NSRect = scrn.frame
         let height = rect.size.height
         let width = rect.size.width
-        
+    
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
             let url = "https://source.unsplash.com/random/"+String(Int(width))+"x"+String(Int(height))
             let data = NSData(contentsOfURL: NSURL(string: url)!)
             if (data !== nil){
                 let imageFromUrl =  NSImage(data: data!)
-                self.overlayWindow.backgroundColor = NSColor (patternImage: imageFromUrl!)
+                self.overlayWindow.backgroundColor =  NSColor (patternImage: imageFromUrl!)
+                
+                for (_, window) in self.secondayOverlayWindows.enumerate() {
+                    let screenSize = window.screen!.frame.size
+                    let imageFromUrl2 =  NSImage(data: data!)
+                    imageFromUrl2!.size = NSSize(width: screenSize.width, height: screenSize.height)
+                    window.backgroundColor =  NSColor (patternImage: imageFromUrl2!)
+                }
+            
+                
             }
         }
     }
@@ -215,6 +248,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         overlayWindow.contentView?.addSubview(skipButton)
         overlayWindow.contentView?.addSubview(breakCountDownLabel)
         breakCountDownLabel.cell?.backgroundStyle = NSBackgroundStyle.Raised
+        
+        overlayWindow.backgroundColor = NSColor (patternImage: NSImage(named: "background")!)
+        
         getPreferences()
         changeImage()
         setBreakTimer()
